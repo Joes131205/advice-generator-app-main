@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+    font-family: "Manrope", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-blue);
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-grayish-blue);
+    padding: 1rem 3rem 4rem 3rem;
+    border-radius: 20px;
+}
+
+#adviceId {
+    font-size: smaller;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: var(--neon-green);
+}
+
+#advice {
+    color: var(--light-cyan);
+    font-size: 28px;
+    font-weight: bolder;
+    margin-bottom: 80px;
+    max-width: 30rem;
+}
+
+#btn-updateAdvice {
+    border-radius: 50%;
+    padding: 1.5rem;
+    border: none;
+    background-color: var(--neon-green);
+    cursor: pointer;
+    transition: 0.2s;
+    transform: translateY(120%);
+    margin-top: -80px;
+    position: relative;
+}
+
+#btn-updateAdvice > img {
+    width: 35px;
+}
+
+#btn-updateAdvice:hover {
+    transition: 0.2s;
+    box-shadow: 0 0 20px var(--neon-green);
+}
+
+.disabled {
+    background-color: var(--grayish-blue) !important;
+    transform: translateY(120%) scale(0.8) !important;
+}
+
+.disabled:hover {
+    box-shadow: 0 0 20px var(--grayish-blue);
+}
+
+@media only screen and (max-width: 768px) {
+    #btn-updateAdvice {
+        padding: 2rem;
+        transform: translateY(110%);
+    }
+
+    #btn-updateAdvice > img {
+        width: 50px;
+    }
+
+    .disabled {
+        background-color: var(--grayish-blue) !important;
+        transform: translateY(115%) scale(1) !important;
+    }
+
+    .container {
+        width: 65%;
+    }
+
+    #adviceId {
+        font-size: medium;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        color: var(--neon-green);
+    }
+
+    #advice {
+        color: var(--light-cyan);
+        font-size: 40px;
+        font-weight: bolder;
+        margin-bottom: 80px;
+        max-width: 30rem;
+    }
+}
